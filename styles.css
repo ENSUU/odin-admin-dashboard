@@ -43,3 +43,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Styling for the project */
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 3fr; 
+}
+
+.sidebar-container {
+    grid-row: 1 / -3;
+}
+
+.header-container {
+
+}
+
+.main-container {
+    grid-column: 2 / 3; 
+}
