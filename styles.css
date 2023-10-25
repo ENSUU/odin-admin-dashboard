@@ -63,6 +63,17 @@ ul {
     margin: 1rem 0;
 }
 
+hr {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 100%;
+  }
+
 .container {
     min-height: 100vh;
     display: grid; 
@@ -120,7 +131,7 @@ ul {
 /* Header Styling */
 .header-container {
     grid-area: 1 / 2 / 2 / 3;
-    padding: 12px;
+    padding: 25px;
     display: grid;
 }
 
@@ -151,7 +162,7 @@ ul {
 
 .user-icons {
     display: flex; 
-    justify-content: center; 
+    justify-content: flex-end; 
     align-items: center;
     gap: 25px;
 }
@@ -197,7 +208,6 @@ ul {
     justify-content: flex-end;
     align-items: center;
     gap: 25px;
-    margin-right: 120px;
 }
 
 .user-buttons a {
@@ -210,16 +220,97 @@ ul {
 
 /* Main Section Styling */
 .main-container {
-    grid-area: 2 / 2 / 4 / 3;
-    background-color: lightgray;
+    background-color: rgb(226, 222, 222);
+    padding: 1rem 2rem;
 
     display: grid; 
-    grid-template-columns: 2fr 1fr;
+    grid-gap: 25px;
+    grid-template-columns: 3fr 1fr;
 }
 
 .your-projects {
-    grid-row: 1 / 3; 
-
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-template-rows: auto 1fr 1fr; 
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 12px;
+}
+
+.your-projects h1, .announcements h1, .trending h1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.your-projects h1 {
+    grid-column: 1 / -1;
+}
+
+.project-cards-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    border-left: 12px solid var(--secondary-color);
+    align-self: center;
+    box-shadow: 0 0 3px 1px black; 
+    
+    
+    display: grid;
+    padding: 3rem;
+}
+
+.project-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-card p {
+    margin: 1rem 0;
+}
+
+.project-actions {
+    display: flex; 
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 10px;
+}
+
+.project-actions img {
+    width: 30px;
+    height: 30px;
+}
+
+.announcement-list {
+    display: grid;
+    padding: 35px;
+    background-color: white;
+    border-radius: 18px;
+}
+
+.announcement-list h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trending-list {
+    display: grid;
+    grid-gap: 10px;
+    background-color: white;
+    border-radius: 18px;
+    padding: 35px;
+}
+
+.trending-list li {
+    display: flex; 
+    align-items: center;
+    gap: 1rem;
+}
+
+.trending-list li img {
+    width: 50px;
+    height: 50px;
 }
